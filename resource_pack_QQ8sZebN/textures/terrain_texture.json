@@ -1,0 +1,14 @@
+{
+    "num_mip_levels": 4,
+    "padding": 8,
+    "resource_pack_name": "tfc",
+    "texture_data": {
+        "tfc:dirt": {
+            "textures": "textures/blocks/dirt"
+        },
+        "tfc:placed_item_flat_stick": {
+            "textures": "textures/blocks/placed_item_flat_stick"
+        }
+    },
+    "texture_name": "atlas.terrain"
+}

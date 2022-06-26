@@ -1,0 +1,16 @@
+{
+    "Arena.Component.Namespace": "tfc",
+    "FirstTabSetting": 1,
+    "ShortItemSettings": [
+        "resource_pack_QQ8sZebN\\ui",
+        "behavior_pack_ivBqCGUf\\Presets",
+        "behavior_pack_ivBqCGUf\\Parts",
+        "behavior_pack_ivBqCGUf\\BoxData",
+        "resource_pack_QQ8sZebN\\effects",
+        "resource_pack_QQ8sZebN\\models",
+        "resource_pack_QQ8sZebN\\textures"
+    ],
+    "Uluru.autoLayerDict": {
+
+    }
+}

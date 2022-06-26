@@ -9,7 +9,9 @@
 !.github/**/*.yml
 !gradle/wrapper/gradle-wrapper.jar
 !gradle/wrapper/gradle-wrapper.properties
-!src/**
+!behavior_pack_ivBqCGUf/**
+!resource_pack_QQ8sZebN/**
+!.mcs/**
 
 # Resource generation
 !resources/**/*.py

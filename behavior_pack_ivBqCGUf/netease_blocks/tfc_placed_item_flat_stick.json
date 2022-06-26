@@ -1,0 +1,69 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "tfc:placed_item_flat_stick",
+            "category": "Construction",
+            "register_to_creative_menu": true
+        },
+        "components": {
+            "minecraft:block_light_absorption": {
+                "value": 0
+            },
+            "minecraft:block_light_emission": {
+                "emission": 0
+            },
+            "minecraft:destroy_time": {
+                "value": 0.0
+            },
+            "minecraft:explosion_resistance": {
+                "value": 0.0
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/placed_item_flat_stick.json"
+            },
+            "netease:aabb": {
+                "clip": {
+                    "max": [
+                        0.75,
+                        0.0625,
+                        0.75
+                    ],
+                    "min": [
+                        0.25,
+                        0.0,
+                        0.25
+                    ]
+                },
+                "collision": {
+                    "max": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "min": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "netease:block_entity": {
+                "movable": false,
+                "tick": true
+            },
+            "netease:pathable": {
+                "value": false
+            },
+            "netease:solid": {
+                "value": false
+            },
+            "netease:render_layer": {
+                "value": "alpha"
+            },
+            "netease:neighborchanged_sendto_script": {
+                "value": true
+            }
+        }
+    }
+}
