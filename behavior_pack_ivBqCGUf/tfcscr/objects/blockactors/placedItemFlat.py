@@ -10,6 +10,8 @@ ServerCompFactory = serverApi.GetEngineCompFactory()
 ClientSystem = clientApi.GetClientSystemCls()
 ClientCompFactory = clientApi.GetEngineCompFactory()
 
+from tfcscr.objects.blocks.placedItemFlat import get_item_by_identifier as get_item_by_identifier
+
 # 服务端
 def on_block_actor_tick(data):
     block_actor_data = ServerCompFactory.CreateBlockEntityData(serverApi.GetLevelId()).GetBlockEntityData(data["dimension"], (data["posX"], data["posY"], data["posZ"]))

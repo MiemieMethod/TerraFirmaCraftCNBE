@@ -22,9 +22,12 @@ class TerraFirmaCraftClientSystem(ClientSystem):
     def ListenEvent(self):
         self.ListenForEvent(clientApi.GetEngineNamespace(), clientApi.GetEngineSystemName(), "ClientBlockUseEvent", self, self.ClientBlockUse)
         self.ListenForEvent(clientApi.GetEngineNamespace(), clientApi.GetEngineSystemName(), "ClientItemUseOnEvent", self, self.ClientItemUseOn)
+        self.ListenForEvent(clientApi.GetEngineNamespace(), clientApi.GetEngineSystemName(), "ClientChestOpenEvent", self, self.ClientChestOpen)
 
     def UnListenEvent(self):
         self.UnListenForEvent(clientApi.GetEngineNamespace(), clientApi.GetEngineSystemName(), "ClientBlockUseEvent", self, self.ClientBlockUse)
+        self.UnListenForEvent(clientApi.GetEngineNamespace(), clientApi.GetEngineSystemName(), "ClientItemUseOnEvent", self, self.ClientItemUseOn)
+        self.UnListenForEvent(clientApi.GetEngineNamespace(), clientApi.GetEngineSystemName(), "ClientChestOpenEvent", self, self.ClientChestOpen)
 
     def ClientBlockUse(self, args):
         print("==== ClientBlockUse ====", args)
@@ -33,3 +36,6 @@ class TerraFirmaCraftClientSystem(ClientSystem):
     def ClientItemUseOn(self, args):
         print("==== ClientItemUseOn ====", args)
         args["ret"] = ItemHelper.on_use_on_client(args)
+
+    def ClientChestOpen(self, args):
+        print("==== ClientChestOpen ====", args)

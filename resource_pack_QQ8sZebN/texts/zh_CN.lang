@@ -1,1 +1,322 @@
+### Gui
+
+## Tooltips
+tfc.tooltip.food_expiry_date.days=将在约 %s 天后过期！
+tfc.tooltip.toolclass=§f工具种类：§7%s
+tfc.tooltip.toolclasses=§f工具种类
+tfc.tooltip.oredictionaryentry=§f矿物词典名称：§7%s
+tfc.tooltip.oredictionaryentries=§f矿物词典名称：
+tfc.tooltip.metal=§f金属：§7%s
+tfc.tooltip.units=%d 单元
+tfc.tooltip.melttemp=℃
+tfc.tooltip.crucible_units=%d / %d 单元
+tfc.tooltip.units.total=§6合计 %d 单元
+tfc.tooltip.units.info_total=%d 单元 / §6合计 %d
+tfc.tooltip.smelting=在 %s 中熔炼
+tfc.tooltip.liquid= - 液态
+tfc.tooltip.solid= - 固态
+tfc.tooltip.barrel_empty=空
+tfc.tooltip.barrel_fluid=含 %1$d mB %2$s
+tfc.tooltip.barrel_fluid_amount=%d mB
+tfc.tooltip.barrel_item=含 %1$dx %2$s
+tfc.tooltip.barrel_item_in_fluid= 和 %1$dx %2$s
+tfc.tooltip.powderkeg_amount=含 %1$dx %2$s
+tfc.tooltip.powderkeg_empty=空
+tfc.tooltip.small_vessel_empty=空
+tfc.tooltip.small_vessel_item=%1$dx %2$s
+tfc.tooltip.small_vessel_unit_total=%s：%d 单元 / §6%f%%
+tfc.tooltip.weldable=可焊接
+tfc.tooltip.workable=可加工
+tfc.tooltip.danger=危险！！
+tfc.tooltip.anvil_plan=目标
+tfc.tooltip.anvil_tier_too_low=此砧等级过低！
+tfc.tooltip.anvil_no_flux=砧里没有助焊剂！
+tfc.tooltip.anvil_too_cold=物品不够热，无法开工！
+tfc.tooltip.anvil_not_weldable=此物品无法被焊接！
+tfc.tooltip.anvil_no_hammer=砧里没有锤！
+tfc.tooltip.anvil_safety=那会毁了原料！
+tfc.tooltip.crucible_result=产物：
+tfc.tooltip.barrel_seal=密封桶
+tfc.tooltip.barrel_unseal=启封桶
+tfc.tooltip.barrel_cooling=冷却中
+tfc.tooltip.calendar=日历
+tfc.tooltip.season=季节：%s
+tfc.tooltip.day=日：%s
+tfc.tooltip.date=日期：%s
+tfc.tooltip.calendar_full_date=%4$04d 年 %2$s %3$02d 日 %1$s
+tfc.tooltip.debug_times=玩家刻：%d | 日历刻：%d
+tfc.tooltip.food_expiry_date=于 %s 过期
+tfc.tooltip.food_rotten=腐烂了 - 我绝对不吃。
+tfc.tooltip.food_infinite_expiry=永不过期
+tfc.tooltip.nutrition=营养值：
+tfc.tooltip.nutrition_saturation= - 饱和度：%s%%
+tfc.tooltip.nutrition_water= - 口渴值：%s%%
+tfc.tooltip.nutrition_nutrient= - %s：%s
+tfc.tooltip.hold_shift_for_nutrition_info=按住 (Shift) 查看营养值信息
+tfc.tooltip.plant_cold=%s过冷%s
+tfc.tooltip.plant_dry=%s过干%s
+tfc.tooltip.plant_hot=%s过热%s
+tfc.tooltip.plant_rain=降水量：
+tfc.tooltip.plant_temp=温度：
+tfc.tooltip.plant_valid=%s适宜%s
+tfc.tooltip.plant_wet=%s过湿%s
+tfc.tooltip.blast_furnace_ore_amount=矿石
+tfc.tooltip.blast_furnace_fuel_amount=燃料
+tfc.tooltip.blast_furnace_melt_amount=熔化
+tfc.tooltip.blast_furnace_invalid_structure=无效的结构！
+tfc.tooltip.large_vessel_seal=密封大缸
+tfc.tooltip.large_vessel_unseal=启封大缸
+tfc.tooltip.powderkeg_seal=密封火药桶
+tfc.tooltip.powderkeg_unseal=启封火药桶
+tfc.tooltip.goldpan.chunkworked=这片地区似乎已被过度开采。你或许发现不了什么。
+tfc.tooltip.smithing_skill=技能加成：%0.1f%%
+tfc.tooltip.crucible_alloy=含 %1$d mB 的 %2$s
+tfc.tooltip.crucible_less_than_one=小于 1 单元
+tfc.tooltip.previous_page=上一页
+tfc.tooltip.next_page=下一页
+tfc.tooltip.firepit_cooking_pot_empty=空
+tfc.tooltip.firepit_cooking_pot_waiting=请添加食材
+tfc.tooltip.firepit_cooking_pot_boiling=沸腾
+tfc.tooltip.firepit_cooking_pot_servings=剩余份数：%d
+tfc.tooltip.fertilized=已受精
+tfc.tooltip.egg_hatch=将在 %d 天后孵化
+tfc.tooltip.egg_hatch_today=将在今天孵化！
+tfc.tooltip.hold_shift_for_climate_info=按住 (Shift) 查看气候信息
+tfc.tooltip.climate_info=气候信息：
+tfc.tooltip.climate_info_rainfall=降水量：%s - %s
+tfc.tooltip.climate_info_temperature=温度：%s℃ - %s℃
+tfc.tooltip.forging_in_progress=锻造中
+
+
+## Animal Tooltips / Messages
+tfc.tooltip.animal.mating.old=这只%s太老了，不能给它配种。
+tfc.tooltip.animal.mating.low_familiarity=这只%s和你的亲密度太低，不能给它配种。
+tfc.tooltip.animal.mating.pregnant=这只%s怀孕了！
+tfc.tooltip.animal.mating.resting=这只%s今天交配过了，正在休息。
+
+tfc.tooltip.animal.product.old=这只%s太老了。
+tfc.tooltip.animal.product.young=这只%s太年轻了。
+tfc.tooltip.animal.product.low_familiarity=这只%s和你的亲密度太低。
+
+tfc.tooltip.animal.product.male_milk=这是公的！
+tfc.tooltip.animal.product.male_egg=这是公的！
+
+tfc.tooltip.animal.product.no_wool=这只%s的毛还没长出来。
+tfc.tooltip.animal.product.no_milk=这只%s没做好产奶的准备。
+tfc.tooltip.animal.product.no_egg=这只%s没做好下蛋的准备。
+
+## Vessel
+tfc.vessel.liquid_solid=液体已经凝固。
+
+## Prospecting Result Messages
+tfc.propick.found=发现
+tfc.propick.found_traces=发现痕量
+tfc.propick.found_small=发现少量
+tfc.propick.found_medium=发现中量
+tfc.propick.found_large=发现大量
+tfc.propick.found_very_large=发现巨量
+tfc.propick.found_nothing=没发现什么有意思的。
+
+## Thatch Bed
+tfc.thatch_bed.spawnpoint=出生点已设置。
+tfc.thatch_bed.not_thundering=这张床太不舒服了，难以入睡。
+
+## Food Traits
+tfc.food_traits.smoked=熏制
+tfc.food_traits.brined=盐渍
+tfc.food_traits.brined_active=盐渍中
+tfc.food_traits.salted=抹盐
+tfc.food_traits.pickled=腌制
+tfc.food_traits.preserved=储存
+tfc.food_traits.vinegar=酸渍
+tfc.food_traits.charcoal_grilled=木炭烤制
+tfc.food_traits.wood_grilled=原木烤制
+tfc.food_traits.burnt_to_a_crisp=一堆黑灰，恶心死了
+tfc.tooltip.barrel_recipe_pickling=腌制中
+tfc.tooltip.barrel_recipe_brining=盐渍中
+tfc.tooltip.barrel_recipe_vinegar=酸渍中
+
+## Skills
+tfc.skill.prospecting=探矿：%s
+tfc.skill.smithing=锻造：%s
+tfc.skill.agriculture=农业：%s
+tfc.skill.butchering=屠宰：%s
+
+tfc.enum.skilltier.novice=新手
+tfc.enum.skilltier.adept=老手
+tfc.enum.skilltier.expert=专家
+tfc.enum.skilltier.master=大师
+
+### Enum types
+## Metal related
+tfc.types.metal.unknown=未知合金
+tfc.types.metal.bismuth=铋
+tfc.types.metal.bismuth_bronze=铋铜
+tfc.types.metal.black_bronze=黑铜
+tfc.types.metal.brass=黄铜
+tfc.types.metal.bronze=青铜
+tfc.types.metal.copper=铜
+tfc.types.metal.gold=金
+tfc.types.metal.lead=铅
+tfc.types.metal.nickel=镍
+tfc.types.metal.rose_gold=玫瑰金
+tfc.types.metal.silver=银
+tfc.types.metal.tin=锡
+tfc.types.metal.zinc=锌
+tfc.types.metal.sterling_silver=纯银
+tfc.types.metal.wrought_iron=锻铁
+tfc.types.metal.pig_iron=生铁
+tfc.types.metal.steel=钢
+tfc.types.metal.platinum=铂
+tfc.types.metal.black_steel=黑钢
+tfc.types.metal.blue_steel=蓝钢
+tfc.types.metal.red_steel=红钢
+tfc.types.metal.weak_steel=脆钢
+tfc.types.metal.weak_black_steel=脆黑钢
+tfc.types.metal.weak_blue_steel=脆蓝钢
+tfc.types.metal.weak_red_steel=脆红钢
+tfc.types.metal.high_carbon_steel=高碳钢
+tfc.types.metal.high_carbon_black_steel=高碳黑钢
+tfc.types.metal.high_carbon_blue_steel=高碳蓝钢
+tfc.types.metal.high_carbon_red_steel=高碳红钢
+
+## Rock category
+tfc.types.rock_category.sedimentary=沉积岩
+tfc.types.rock_category.metamorphic=变质岩
+tfc.types.rock_category.igneous_intrusive=侵入型岩浆岩
+tfc.types.rock_category.igneous_extrusive=喷出型岩浆岩
+
+## Tier
+
+tfc.enum.tier.tier_0=第零级
+tfc.enum.tier.tier_i=第一级
+tfc.enum.tier.tier_ii=第二级
+tfc.enum.tier.tier_iii=第三级
+tfc.enum.tier.tier_iv=第四级
+tfc.enum.tier.tier_v=第五级
+tfc.enum.tier.tier_vi=第六级
+
+## Size
+tfc.enum.size.tiny=极小
+tfc.enum.size.very_small=非常小
+tfc.enum.size.small=小
+tfc.enum.size.normal=正常
+tfc.enum.size.large=大
+tfc.enum.size.very_large=非常大
+tfc.enum.size.huge=极大
+
+## Weight
+tfc.enum.weight.very_light=极轻
+tfc.enum.weight.light=轻
+tfc.enum.weight.medium=中
+tfc.enum.weight.heavy=重
+tfc.enum.weight.very_heavy=极重
+
+## Heat
+tfc.enum.heat.warming=暖
+tfc.enum.heat.hot=热
+tfc.enum.heat.very_hot=灼热
+tfc.enum.heat.faint_red=淡红
+tfc.enum.heat.dark_red=暗红
+tfc.enum.heat.bright_red=亮红
+tfc.enum.heat.orange=橙
+tfc.enum.heat.yellow=黄
+tfc.enum.heat.yellow_white=黄白
+tfc.enum.heat.white=白
+tfc.enum.heat.brilliant_white=炽白
+
+tfc.enum.heat.torch.catching_fire=生火
+tfc.enum.heat.torch.lit=点燃
+
+tfc.enum.forge_step.hit_light=轻击
+tfc.enum.forge_step.hit_medium=击打
+tfc.enum.forge_step.hit_hard=重击
+tfc.enum.forge_step.draw=牵拉
+tfc.enum.forge_step.bend=弯曲
+tfc.enum.forge_step.punch=冲压
+tfc.enum.forge_step.shrink=收缩
+tfc.enum.forge_step.upset=镦锻
+
+tfc.enum.forgerule.hit_any=击打，任意
+tfc.enum.forgerule.hit_not_last=击打，非最末
+tfc.enum.forgerule.hit_last=击打，末尾
+tfc.enum.forgerule.hit_second_last=击打，倒数第二
+tfc.enum.forgerule.hit_third_last=击打，倒数第三
+tfc.enum.forgerule.draw_any=牵拉，任意
+tfc.enum.forgerule.draw_last=牵拉，末尾
+tfc.enum.forgerule.draw_not_last=牵拉，非最末
+tfc.enum.forgerule.draw_second_last=牵拉，倒数第二
+tfc.enum.forgerule.draw_third_last=牵拉，倒数第三
+tfc.enum.forgerule.punch_any=冲压，任意
+tfc.enum.forgerule.punch_last=冲压，末尾
+tfc.enum.forgerule.punch_not_last=冲压，非最末
+tfc.enum.forgerule.punch_second_last=冲压，倒数第二
+tfc.enum.forgerule.punch_third_last=冲压，倒数第三
+tfc.enum.forgerule.bend_any=弯曲，任意
+tfc.enum.forgerule.bend_last=弯曲，末尾
+tfc.enum.forgerule.bend_not_last=弯曲，非最末
+tfc.enum.forgerule.bend_second_last=弯曲，倒数第二
+tfc.enum.forgerule.bend_third_last=弯曲，倒数第三
+tfc.enum.forgerule.upset_any=镦锻，任意
+tfc.enum.forgerule.upset_last=镦锻，末尾
+tfc.enum.forgerule.upset_not_last=镦锻，非最末
+tfc.enum.forgerule.upset_second_last=镦锻，倒数第二
+tfc.enum.forgerule.upset_third_last=镦锻，倒数第三
+tfc.enum.forgerule.shrink_any=收缩，任意
+tfc.enum.forgerule.shrink_last=收缩，末尾
+tfc.enum.forgerule.shrink_not_last=收缩，非最末
+tfc.enum.forgerule.shrink_second_last=收缩，倒数第二
+tfc.enum.forgerule.shrink_third_last=收缩，倒数第三
+
+
+tfc.enum.season.january=仲冬
+tfc.enum.season.february=暮冬
+tfc.enum.season.march=初春
+tfc.enum.season.april=仲春
+tfc.enum.season.may=暮春
+tfc.enum.season.june=初夏
+tfc.enum.season.july=仲夏
+tfc.enum.season.august=暮夏
+tfc.enum.season.september=初秋
+tfc.enum.season.october=仲秋
+tfc.enum.season.november=暮秋
+tfc.enum.season.december=初冬
+
+tfc.enum.month.january=一月
+tfc.enum.month.february=二月
+tfc.enum.month.march=三月
+tfc.enum.month.april=四月
+tfc.enum.month.may=五月
+tfc.enum.month.june=六月
+tfc.enum.month.july=七月
+tfc.enum.month.august=八月
+tfc.enum.month.september=九月
+tfc.enum.month.october=十月
+tfc.enum.month.november=十一月
+tfc.enum.month.december=十二月
+
+tfc.enum.day.sunday=周日
+tfc.enum.day.monday=周一
+tfc.enum.day.tuesday=周二
+tfc.enum.day.wednesday=周三
+tfc.enum.day.thursday=周四
+tfc.enum.day.friday=周五
+tfc.enum.day.saturday=周六
+
+tfc.enum.nutrient.grain=谷物
+tfc.enum.nutrient.vegetables=蔬菜
+tfc.enum.nutrient.fruit=水果
+tfc.enum.nutrient.protein=蛋白质
+tfc.enum.nutrient.dairy=乳制品
+
+tfc.enum.growstatus.dead=植物已死
+tfc.enum.growstatus.not_growing=植物不在生长
+tfc.enum.growstatus.can_grow=植物可以生长
+tfc.enum.growstatus.growing=植物正在生长
+tfc.enum.growstatus.fully_grown=植物已长成
+
+
+### ================== BLOCKS ===========================
+
+
 tile.tfc:placed_item_flat_stick.name=杂物：木棍

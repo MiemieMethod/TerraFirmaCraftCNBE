@@ -16,5 +16,5 @@ import tfcscr.utils.blockActorFactory as BlockActorFactory
 # 服务端
 def on_block_actor_tick(data):
     block_actor_cls = BlockActorFactory.get_block_actor_class(data["blockName"])
-    block_actor_cls and block_actor_cls.on_block_actor_tick(data)
+    block_actor_cls and hasattr(block_actor_cls, "on_block_actor_tick") and block_actor_cls.on_block_actor_tick(data)
     # print("===== blockActorHelper on_block_actor_tick =====")

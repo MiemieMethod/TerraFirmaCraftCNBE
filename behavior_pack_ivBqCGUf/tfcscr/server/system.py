@@ -5,15 +5,18 @@ import mod.server.extraServerApi as serverApi
 import tfcscr.utils.blockHelper as BlockHelper
 import tfcscr.utils.itemHelper as ItemHelper
 import tfcscr.utils.blockActorHelper as BlockActorHelper
+import tfcscr.utils.commonUtils as CommonUtils
 
 ServerSystem = serverApi.GetServerSystemCls()
-compFactory = serverApi.GetEngineCompFactory()
+ServerCompFactory = serverApi.GetEngineCompFactory()
 
 class TerraFirmaCraftServerSystem(ServerSystem):
 
     def __init__(self, namespace, systemName):
         super(TerraFirmaCraftServerSystem, self).__init__(namespace, systemName)
         print("===== TerraFirmaCraft ServerSystem init =====")
+        self.player_container_info = {}
+        self.tick_count = 0
         self.ListenEvent()
 
     def Destroy(self):
@@ -33,6 +36,11 @@ class TerraFirmaCraftServerSystem(ServerSystem):
         self.UnListenForEvent(serverApi.GetEngineNamespace(), serverApi.GetEngineSystemName(), "ServerItemUseOnEvent", self, self.ServerItemUseOn)
         self.UnListenForEvent(serverApi.GetEngineNamespace(), serverApi.GetEngineSystemName(), "ServerBlockEntityTickEvent", self, self.ServerBlockEntityTick)
         self.UnListenForEvent(serverApi.GetEngineNamespace(), serverApi.GetEngineSystemName(), "BlockNeighborChangedServerEvent", self, self.BlockNeighborChanged)
+    
+    def Update(self):
+        ItemHelper.item_container_ticking(self.player_container_info, self.tick_count)
+        self.tick_count = self.tick_count + 1
+        # print("===== TerraFirmaCraft ServerSystem Update =====")
 
     def ServerEntityTryPlaceBlock(self, args):
         print("==== ServerEntityTryPlaceBlockEvent ====", args)

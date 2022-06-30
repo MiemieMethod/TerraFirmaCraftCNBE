@@ -5,9 +5,10 @@
         0
     ],
     "tfc:placed_item_flat_stick": {
-        "carried_textures": "tfc:placed_item_flat_stick",
+        "carried_textures": "tfc:placed_item_flat_stick_carried",
         "textures": "tfc:placed_item_flat_stick",
         "blockshape": "lilypad",
-        "isotropic": true
+        "isotropic": true,
+        "sound": "wood"
     }
 }

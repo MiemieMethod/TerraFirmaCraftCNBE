@@ -10,6 +10,8 @@ ServerCompFactory = serverApi.GetEngineCompFactory()
 ClientSystem = clientApi.GetClientSystemCls()
 ClientCompFactory = clientApi.GetEngineCompFactory()
 
+import tfcscr.utils.itemHelper as ItemHelper
+
 # 共用
 def get_item_by_identifier(id):
     item_mapping = {
@@ -24,8 +26,13 @@ def get_item_by_identifier(id):
 def on_use(data):
     if ServerCompFactory.CreatePlayer(data["playerId"]).IsSneaking() == False:
         if not ServerCompFactory.CreateItem(data["playerId"]).GetPlayerItem(MinecraftEnum.ItemPosType.CARRIED) and ServerCompFactory.CreateBlockInfo(serverApi.GetLevelId()).SetBlockNew((data["x"], data["y"], data["z"]), {"name": "minecraft:air"}, 0, data["dimensionId"]) == True:
-            if get_item_by_identifier(data["blockName"]) and ServerCompFactory.CreateItem(data["playerId"]).SpawnItemToPlayerInv({"newItemName": get_item_by_identifier(data["blockName"])[0], "newAuxValue": get_item_by_identifier(data["blockName"])[1], "count": 1}, data["playerId"]) == True:
-                return True
+            item = get_item_by_identifier(data["blockName"])
+            if item:
+                item_to_add_to_inv = {"newItemName": item[0], "newAuxValue": item[1], "count": 1, "userData": {}}
+                # item_to_add_to_inv = ItemHelper.set_temperature(item_to_add_to_inv, 1600)
+                print("===== placed_item_flat on_use item_to_add_to_inv =====", item_to_add_to_inv)
+                if ServerCompFactory.CreateItem(data["playerId"]).SpawnItemToPlayerInv(ItemHelper.update_custom_tips(item_to_add_to_inv), data["playerId"]) == True:
+                    return True
             else:
                 print("===== placed_item_flat on_use Give Failed =====")
         else:
