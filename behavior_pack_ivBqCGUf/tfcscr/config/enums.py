@@ -2,6 +2,65 @@
 
 import mod.common.minecraftEnum as MinecraftEnum
 
+size_enum = {
+    "TINY": {
+        "index": 0,
+        "name": "tiny"
+    },
+    "VERY_SMALL": {
+        "index": 1,
+        "name": "very_small"
+    },
+    "SMALL": {
+        "index": 2,
+        "name": "small"
+    },
+    "NORMAL": {
+        "index": 3,
+        "name": "normal"
+    },
+    "LARGE": {
+        "index": 4,
+        "name": "large"
+    },
+    "VERY_LARGE": {
+        "index": 5,
+        "name": "very_large"
+    },
+    "HUGE": {
+        "index": 6,
+        "name": "huge"
+    }
+}
+
+weight_enum = {
+    "VERY_LIGHT": {
+        "index": 0,
+        "name": "very_light",
+        "stack_size": 64
+    },
+    "LIGHT": {
+        "index": 1,
+        "name": "light",
+        "stack_size": 32
+    },
+    "MEDIUM": {
+        "index": 2,
+        "name": "medium",
+        "stack_size": 16
+    },
+    "HEAVY": {
+        "index": 3,
+        "name": "heavy",
+        "stack_size": 4
+    },
+    "VERY_HEAVY": {
+        "index": 4,
+        "name": "very_heavy",
+        "stack_size": 1
+    },
+}
+
 heat_enum = {
     "WARMING": {
         "index": 0,

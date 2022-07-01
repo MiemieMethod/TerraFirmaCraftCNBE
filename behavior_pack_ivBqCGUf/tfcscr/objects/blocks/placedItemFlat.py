@@ -15,7 +15,7 @@ import tfcscr.utils.itemHelper as ItemHelper
 # 共用
 def get_item_by_identifier(id):
     item_mapping = {
-        "tfc:placed_item_flat_stick": ("minecraft:stick", 0)
+        "tfc:placed_item_flat_stick": ("tfc:stick", 0)
     }
     if id in item_mapping:
         return item_mapping[id]
@@ -28,8 +28,8 @@ def on_use(data):
         if not ServerCompFactory.CreateItem(data["playerId"]).GetPlayerItem(MinecraftEnum.ItemPosType.CARRIED) and ServerCompFactory.CreateBlockInfo(serverApi.GetLevelId()).SetBlockNew((data["x"], data["y"], data["z"]), {"name": "minecraft:air"}, 0, data["dimensionId"]) == True:
             item = get_item_by_identifier(data["blockName"])
             if item:
-                item_to_add_to_inv = {"newItemName": item[0], "newAuxValue": item[1], "count": 1, "userData": {}}
-                # item_to_add_to_inv = ItemHelper.set_temperature(item_to_add_to_inv, 1600)
+                item_to_add_to_inv = {"newItemName": item[0], "newAuxValue": item[1], "count": 1}
+                item_to_add_to_inv = ItemHelper.set_temperature(item_to_add_to_inv, 1600)
                 print("===== placed_item_flat on_use item_to_add_to_inv =====", item_to_add_to_inv)
                 if ServerCompFactory.CreateItem(data["playerId"]).SpawnItemToPlayerInv(ItemHelper.update_custom_tips(item_to_add_to_inv), data["playerId"]) == True:
                     return True

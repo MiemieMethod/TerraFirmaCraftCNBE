@@ -1,7 +1,8 @@
 {
+    "resource_pack_name": "tfc",
+    "texture_name": "atlas.terrain",
     "num_mip_levels": 4,
     "padding": 8,
-    "resource_pack_name": "tfc",
     "texture_data": {
         "tfc:placed_item_flat_stick_carried": {
             "textures": "textures/items/stick"
@@ -9,6 +10,5 @@
         "tfc:placed_item_flat_stick": {
             "textures": "textures/blocks/placed_item_flat_stick"
         }
-    },
-    "texture_name": "atlas.terrain"
+    }
 }

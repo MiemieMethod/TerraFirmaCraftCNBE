@@ -17,26 +17,36 @@ class TerraFirmaCraftServerSystem(ServerSystem):
         print("===== TerraFirmaCraft ServerSystem init =====")
         self.player_container_info = {}
         self.tick_count = 0
+        self.ListenEngineEvent()
         self.ListenEvent()
 
     def Destroy(self):
         print("===== TerraFirmaCraft ServerSystem Destroy =====")
+        self.UnListenEngineEvent()
         self.UnListenEvent()
 
-    def ListenEvent(self):
+    def ListenEngineEvent(self):
         self.ListenForEvent(serverApi.GetEngineNamespace(), serverApi.GetEngineSystemName(), "ServerEntityTryPlaceBlockEvent", self, self.ServerEntityTryPlaceBlock)
         self.ListenForEvent(serverApi.GetEngineNamespace(), serverApi.GetEngineSystemName(), "ServerBlockUseEvent", self, self.ServerBlockUse)
         self.ListenForEvent(serverApi.GetEngineNamespace(), serverApi.GetEngineSystemName(), "ServerItemUseOnEvent", self, self.ServerItemUseOn)
         self.ListenForEvent(serverApi.GetEngineNamespace(), serverApi.GetEngineSystemName(), "ServerBlockEntityTickEvent", self, self.ServerBlockEntityTick)
         self.ListenForEvent(serverApi.GetEngineNamespace(), serverApi.GetEngineSystemName(), "BlockNeighborChangedServerEvent", self, self.BlockNeighborChanged)
 
-    def UnListenEvent(self):
+    def ListenEvent(self):
+        self.ListenForEvent("TerraFirmaCraft", "ClientSystem", "ServerChestOpenEvent", self, self.ServerChestOpen)
+        self.ListenForEvent("TerraFirmaCraft", "ClientSystem", "ServerChestCloseEvent", self, self.ServerChestClose)
+
+    def UnListenEngineEvent(self):
         self.UnListenForEvent(serverApi.GetEngineNamespace(), serverApi.GetEngineSystemName(), "ServerEntityTryPlaceBlockEvent", self, self.ServerEntityTryPlaceBlock)
         self.UnListenForEvent(serverApi.GetEngineNamespace(), serverApi.GetEngineSystemName(), "ServerBlockUseEvent", self, self.ServerBlockUse)
         self.UnListenForEvent(serverApi.GetEngineNamespace(), serverApi.GetEngineSystemName(), "ServerItemUseOnEvent", self, self.ServerItemUseOn)
         self.UnListenForEvent(serverApi.GetEngineNamespace(), serverApi.GetEngineSystemName(), "ServerBlockEntityTickEvent", self, self.ServerBlockEntityTick)
         self.UnListenForEvent(serverApi.GetEngineNamespace(), serverApi.GetEngineSystemName(), "BlockNeighborChangedServerEvent", self, self.BlockNeighborChanged)
-    
+
+    def UnListenEvent(self):
+        self.UnListenForEvent("TerraFirmaCraft", "ClientSystem", "ServerChestOpenEvent", self, self.ServerChestOpen)
+        self.UnListenForEvent("TerraFirmaCraft", "ClientSystem", "ServerChestCloseEvent", self, self.ServerChestClose)
+
     def Update(self):
         ItemHelper.item_container_ticking(self.player_container_info, self.tick_count)
         self.tick_count = self.tick_count + 1
@@ -61,3 +71,11 @@ class TerraFirmaCraftServerSystem(ServerSystem):
     def BlockNeighborChanged(self, args):
         # print("==== BlockNeighborChanged ====", args)
         BlockHelper.on_neighbor_changed(args)
+
+    def ServerChestOpen(self, args):
+        self.player_container_info[args["playerId"]] = (args["x"], args["y"], args["z"], ServerCompFactory.CreateDimension(args["playerId"]).GetEntityDimensionId())
+        print("==== ServerChestOpen ====", args, self.player_container_info)
+
+    def ServerChestClose(self, args):
+        del self.player_container_info[args["playerId"]]
+        print("==== ServerChestClose ====", args, self.player_container_info)
